@@ -1,6 +1,6 @@
 import React from 'react';
 
-const LoadingSkeleton = () => {
+const Loading = () => {
   return (
     <div role="status" className='flex justify-center items-center h-[700px] max-w-full'>
       <svg aria-hidden="true" class="inline w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -12,4 +12,4 @@ const LoadingSkeleton = () => {
   );
 };
 
-export default LoadingSkeleton;
+export default Loading;

@@ -2,7 +2,7 @@
 
 import LineChart from '@/components/lineChart';
 import PieChart from '@/components/pieChart';
-import SkeletonLoading from '@/components/skeletonLoading';
+import Loading from '@/components/Loading';
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 
@@ -33,9 +33,12 @@ export default function Organizers() {
 
   return (
     <div>
+      {/* Buat logika, jika state loading benar, maka tampilkan component loading yang telah di import */}
       {loading ? (
-        <SkeletonLoading />
-      ) : (
+        <Loading />
+      ) : 
+      // Jika loading false, maka tampilkan isi dari page
+      (
         <div className='max-w-screen-2xl mx-auto p-20 bg-blueDark text-white antialiased'>
           <h1 className='text-4xl font-bold'>{organizer.annotations.source_name}</h1>
           <h3 className='text-lg font-medium leading-relaxed mt-3 tracking-tight whitespace-normal w-1/3'>
